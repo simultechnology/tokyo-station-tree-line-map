@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample</title>
+  <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <script src="//cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src="//maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+  <script src="//matchingnotes.com/javascripts/leaflet-google.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<style type="text/css">
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  html, body, #map {
+    height: 100%;
+  }
+
+  #map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background-color: #ffffff;*/
+  }
+
+  #btn-container {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    z-index: 999;
+  }
+
+  .btn {
+    background: #a8abad;
+    background-image: -webkit-linear-gradient(top, #a8abad, #303233);
+    background-image: -moz-linear-gradient(top, #a8abad, #303233);
+    background-image: -ms-linear-gradient(top, #a8abad, #303233);
+    background-image: -o-linear-gradient(top, #a8abad, #303233);
+    background-image: linear-gradient(to bottom, #a8abad, #303233);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+
+  .leaflet-google-layer {
+    z-index: 0;
+    opacity: 0.3;
+  }
+
+</style>
+<body>
+<div id="map">
+  <div id="btn-container">
+    <div class="btn" value="BLANK">略地図</div>
+    <div class="btn" value="BLACK">背景</div>
+    <div class="btn" value="2015RASP1">屋外</div>
+    <div class="btn" value="NAVI1TB1">地下1</div>
+    <div class="btn" value="NAVI1TB2">地下2</div>
+    <div class="btn" value="NAVI1T1">屋内</div>
+  </div>
+</div>
+<script src="router.js"></script>
+</body>
+</html>
